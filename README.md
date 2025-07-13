@@ -18,4 +18,4 @@ The design is inspired by Cynthia Ugwu Portfolio page.
 👉 [Link](https://cynthiaugwu.com/)
 
 ## 📸 Preview
-![Site Preview](./Capture.png)
+![Site Preview](./Capture.PNG)
