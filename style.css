@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "General Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  cursor: default; /* Hides default pointer */
+}
+
+/* Custom Cursor */
+#minicircle {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  z-index: 99999;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+/* Animation Wrappers */
+.bounding {
+  width: fit-content;
+  overflow: hidden;
+}
+
+.bounding .boundingelem {
+  transform: translateY(100%);
+}
+
+/* Main Scroll Container */
+#main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+#nav a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#heading {
+  margin-top: 90px;
+}
+
+#heading h1 {
+  margin-left: 30px;
+  font-size: 10vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+#heading #secondh1 {
+  margin-left: 230px;
+}
+
+.blocktext {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: fit-content;
+}
+
+.blocktext h5 {
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+#chhotiheadings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 100px;
+  padding-right: 50px;
+}
+
+#chhotiheadings h5 {
+  font-size: 1vw;
+  margin-top: 0.5vw;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+#herofooter {
+  position: absolute;
+  bottom: 3%;
+  width: 100%;
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#herofooter a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#iconset {
+  display: flex;
+  gap: 5px;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #888;
+}
+
+/* Project Section */
+#second {
+  padding-right: 10vw;
+  padding-top: 200px;
+  background-color: black;
+  width: 100%;
+  min-height: 100vh; /* ✅ Ensures about section doesn’t overlap */
+}
+
+.elem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3.5vw 3vw;
+  border-top: 1px solid #888;
+}
+
+.elem h1 {
+  font-size: 7.6vw;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.elemlast {
+  border-bottom: 1px solid #888;
+}
+
+.elem img {
+  position: absolute;
+  height: 140%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 10vw 10vw;
+  padding-left: 2vw;
+  background-color: black;
+}
+
+#about img {
+  width: 200px;
+}
+
+#textabout {
+  width: 25rem;
+}
+
+#textabout h5 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+#textabout p {
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+#textabout a {
+  padding: 12px 22px;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 100px;
+}
+
+/* Subscribe Section */
+#subscribe {
+  padding: 20px 30px 7vw;
+  background-color: black;
+}
+
+#subscribe h5 {
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+#subscribe h3 {
+  margin-top: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 30px;
+  background-color: black;
+}
+
+#footerleft {
+  display: flex;
+  gap: 20px;
+}
+
+#footerright {
+  display: flex;
+  gap: 30px;
+}
+
+#footer a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.profile-pic {
+  width: 150px;       /* adjust as needed */
+  height: 150px;      /* same as width for perfect circle */
+  border-radius: 50%; /* this makes it circular */
+  object-fit: cover;  /* ensures image fills the circle */
+  border: 2px solid white; /* optional: add border */
+}
