@@ -1,0 +1,92 @@
+/* SMOOTH SCROLLING STATES */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* MAIN SCROLL CONTAINER */
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+/* HORIZONTAL SCROLL LAYOUT */
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+/* SCROLLBAR TRACK */
+.c-scrollbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 11px;
+  height: 100%;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  transform-origin: center right;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+/* HORIZONTAL SCROLLBAR TRACK */
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  transform: scaleY(1);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+/* SCROLLBAR THUMB */
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  margin: 2px;
+  border-radius: 10px;
+  background-color: black;
+  opacity: 0.5;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: grabbing;
+}
+
+/* HORIZONTAL SCROLLBAR THUMB */
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
